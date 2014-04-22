@@ -72,5 +72,3 @@ Administration 的 Scripts 里面
 希望你人品够好，一次搞定。
 
 > (PS 如果你的连接很不稳定，很慢，请尝试改小PPTP的 MTU MRU 值，比如 1300)
-
-> (PS2 PPTP 配置里请勾选 Redirect Internet traffic)
