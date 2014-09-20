@@ -67,6 +67,28 @@ Administration 的 Scripts 里面
 
 > sh /jffs/pptp/run.sh
 
+6.配置VPN
+
+在PPTP Client里
+
+勾上 Start with WAN
+
+Server Address 要写 VPN 服务器的 IP
+
+Encryption 选 Max 128 bit
+
+勾上 Stateless MPPE connection
+
+Accept DNS configuration 选 YES
+
+Redirect Internet traffic 不要选
+
+Remote subnet / netmask 根据你的 VPN 来填写，比如云梯是 10.10.0.1/255.255.255.0
+
+Create NAT on tunnel 勾上
+
+设置 MTU MRU 值，比如 1300
+
 保存，重启。
 
 希望你人品够好，一次搞定。
