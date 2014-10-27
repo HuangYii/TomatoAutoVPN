@@ -43,6 +43,10 @@ case $1 in
 			"tomato")
 				echo "$INFO $(date "+%d/%b/%Y:%H:%M:%S") router type: tomato" >> $LOG
 				OLDGW=$(nvram get wan_gateway_get)
+				if [ $OLDGW == '' ]; then
+					echo "$INFO OLDGW is empty, is the LAN connected?" >> $LOG
+					OLDGW=$(nvram get lan_ipaddr)
+				fi
 				VPNSRV=$(nvram get pptp_client_srvip)
 				VPNSRVSUB=$(nvram get pptp_client_srvsubmsk)
 				PPTPDEV=$(nvram get pptp_client_iface)
